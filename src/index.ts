@@ -12,3 +12,5 @@ const pipeline = new Pipeline('hello', 'mate', [
 ])
 
 pipeline.run()
+
+pipeline.generateDefinition()

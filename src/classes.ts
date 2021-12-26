@@ -1,3 +1,4 @@
+import fs from 'fs'
 import { v4 as uuidv4 } from 'uuid'
 import { displayLogo, stepExecutionWrapper } from './utilities/runner'
 
@@ -27,6 +28,10 @@ class Pipeline {
         for (let stepGroups of this.stepGroups) {
             stepGroups.run()
         }
+    }
+
+    generateDefinition() {
+        fs.writeFileSync('pipeline.json', JSON.stringify(this))
     }
 }
 
