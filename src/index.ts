@@ -1,10 +1,14 @@
-import express from 'express'
+import { Step, StepGroup, Pipeline } from './classes'
 
-const app = express()
-const PORT = 8000
+const pipeline = new Pipeline('hello', 'mate', [
+    new StepGroup('hello', 'again', [
+        new Step('Log something', 'This step logs something', () =>
+            console.log('hello')
+        ),
+        new Step('Log something', 'This step logs something else', () =>
+            console.log('second step')
+        ),
+    ]),
+])
 
-app.get('/', (req, res) => res.send('Express + TypeScript Server'))
-
-app.listen(PORT, () => {
-    console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`)
-})
+pipeline.run()
