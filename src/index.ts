@@ -1,15 +1,19 @@
 import { Step, StepGroup, Pipeline } from './classes'
 
-const pipeline = new Pipeline('hello', 'mate', [
-    new StepGroup('hello', 'again', [
-        new Step('Log something', 'This step logs something', () =>
-            console.log('hello')
-        ),
-        new Step('Log something', 'This step logs something else', () =>
-            console.log('second step')
-        ),
-    ]),
-])
+const pipeline = new Pipeline(
+    'Highway to prod',
+    'Builds and deploys a javascript application',
+    [
+        new StepGroup('Build', 'Builds the javascript application', [
+            new Step('Install npm', 'This step installs npm', () =>
+                console.log('hello')
+            ),
+            new Step('Run build', 'This step runs the npm build', () =>
+                console.log('second step')
+            ),
+        ]),
+    ]
+)
 
 pipeline.run()
 

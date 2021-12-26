@@ -1,22 +1,22 @@
 {
-    "uuid": "1c81f179-6d62-4009-ae0d-671ef7c66093",
-    "name": "hello",
-    "description": "mate",
+    "uuid": "d3e1a74b-4ad5-4b4f-b574-f5e5eb7a959b",
+    "name": "Highway to prod",
+    "description": "Builds and deploys a javascript application",
     "stepGroups": [
         {
-            "uuid": "a19ddd3a-9734-4793-81d5-65a1c7333544",
-            "name": "hello",
-            "description": "again",
+            "uuid": "70c97bad-ad03-4b1a-9747-65e557089f38",
+            "name": "Build",
+            "description": "Builds the javascript application",
             "steps": [
                 {
-                    "uuid": "5ea71f95-5a1f-4229-80b9-9381c9a468d2",
-                    "name": "Log something",
-                    "description": "This step logs something"
+                    "uuid": "5df38e51-d9c4-45e7-b32a-ca088bd6bfd7",
+                    "name": "Install npm",
+                    "description": "This step installs npm"
                 },
                 {
-                    "uuid": "efad4a83-74ca-43ec-8a19-130b71357938",
-                    "name": "Log something",
-                    "description": "This step logs something else"
+                    "uuid": "7b142219-5cd7-4fcf-a6a7-c4d81634794b",
+                    "name": "Run build",
+                    "description": "This step runs the npm build"
                 }
             ]
         }
